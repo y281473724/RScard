@@ -1,0 +1,401 @@
+body{
+    background: #EFEFEF; 
+    /* margin 简写属性在一个声明中设置所有外边距属性。
+    该属性可以有 1 到 4 个值,按顺序是上 右  下  左 */
+    margin: 0;
+}
+.topNavBar .logo{
+    font-family: 'Arial Black';
+}
+.topNavBar .logo .tx{
+    font-size: 22px;
+    margin-right: 6px ;
+    color:rgb(204, 99, 99);
+}
+.topNavBar .logo  .edu{
+    font-size: 20px;
+    color:rgb(125, 127, 128);
+   }
+a{
+    /* inherit 继承 */
+    color: inherit;
+    /* text-decoration 这个属性允许对文本设置某种效果，
+    如加下划线。如果后代元素没有自己的装饰，
+    祖先元素上设置的装饰会“延伸”到后代元素中。none表示默认样式 */
+    text-decoration: none;
+}
+h1,h2,h3,h4,p,dl,dt,dd,li,ul{
+    margin:0;
+    /* padding 内边距 */
+    padding:0;
+}
+
+ul,ol{ 
+    /* list-style 简写属性在一个声明中设置所有的列表属性 */
+    list-style: none;
+}
+hr{
+    height:0;
+    /* border设置边框属性,可以按顺序设置如下属性：
+    border-width  border-style  border-color */
+    border:none;
+    /* border-top 把上边框的所有属性设置到一个声明中,
+    属性设置顺序和border相同 ,solid表示实线 */
+    border-top:1px solid #DEDEDE;
+}
+
+/* 清楚块级浮动  不知道什么意思 */
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden
+}
+
+
+.topNavBar {
+    /* position 属性规定元素的定位类型.
+    fixed表示生成绝对定位的元素，相对于浏览器窗口进行定位。
+    元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定 */
+    position:fixed;
+    /* top 属性规定元素的顶部边缘。
+    该属性定义了一个定位元素的上外边距边界与其包含块上边界之间的偏移。 */
+    top: 0;
+    left:0;
+    /* 上内边距 */
+    padding-top: 20px;
+    /* 下内边距 */
+    padding-bottom: 20px;
+    width: 100%;
+
+    /* transition 属性是一个简写属性，用于设置四个过渡属性：
+    transition-property
+    transition-duration
+    transition-timing-function
+    transition-delay */
+    /* transition:0.5s; */
+    color:#C3C4C7;
+  } 
+
+.topNavBar.sticky{
+    background: rgba(255, 255, 255, 0.897);
+    padding:10px 0;
+    z-index: 1;
+    box-shadow:0 0 10px rgba(0,0,0,0.25);
+    color:#3d4451;
+}
+
+
+.topNavBar-inner{
+    padding:0 16px;;
+  } 
+.topNavBar > a{
+    float:left;
+}
+.topNavBar nav{
+    float: right;
+    padding-top: 2px;
+
+  } 
+  
+  .topNavBar  nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .topNavBar  nav > ul > li {
+    float: left;
+    margin-left: 13px;
+    margin-right: 22px;
+    position:relative;
+   }
+.topNavBar  nav > ul > li >a {
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    border-top:2px solid transparent;
+    border-bottom:2px solid transparent;
+    display: block; 
+    color:inherit;
+    position:relative;
+    transition: all 0.5s;
+}
+.topNavBar  nav > ul >  li.active  >a::after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:3px;
+    background: #E8676B  ;
+    animation:menuSlide 0.5s;
+} 
+
+@keyframes menuSlide
+{
+    from {width:0;}
+    to {width:100%;}
+}
+.topNavBar  nav > ul >  li.highlight  >a::after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:3px;
+    background: #E8676B  ;
+    animation:menuSlide 0.5s;
+    
+  } 
+ 
+.banner {
+    height:515px;
+    background-image: url(E:/remuse/images/background.jpg);
+    background-position:center center;
+    background-size: cover;
+  }
+
+
+.banner .mask{
+    height:515px;
+    background-color:rgba(0,0,0,0.7);
+  }
+.seal{
+    margin-top: 60px;
+}
+
+#siteAbout{
+    max-width: 940px;
+    margin-top:-315px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #ffff;
+    box-shadow:0px 1px 5px 0px rgba(0,0,0,0.5);
+    /* animation: divMove 0.5s; */
+}
+/* @keyframes divMove{
+    from{margin-top:-185px}
+    to{margin-top:-285px}
+} */
+#pic img{
+    widows: 290px;
+    height: 352px;
+}
+#siteAbout .welcome {
+    background:#E8676B;
+    color: white;
+    display: inline-block;
+    padding: 4px 16px;
+    line-height:22px;
+    position: relative;
+    margin-bottom:10px;
+}
+#siteAbout .welcome .triangle{
+    border: 8px solid transparent;
+    width:0px; 
+    border-left-color: #e6686a;
+    border-top-width: 0px;
+    display:block;
+    position: absolute;
+    top:100%;
+    left:4px;
+    }
+#siteAbout .picture{
+    float: left;
+    
+}
+#siteAbout .picture:hover{
+    
+    transform: scale(1.01,1.01); 
+    
+   
+}
+#siteAbout .text{
+    float: left;
+    margin-left: 65px;
+    width:400px;
+}
+#siteAbout .text h1{
+    margin-top: 16px;
+}
+#siteAbout .text p{
+    margin-top: 8px;
+}
+#siteAbout .text hr{
+    margin: 20px 0;
+}
+#siteAbout .PictureAndText{
+    padding:50px; 
+    padding-bottom: 40px;
+}
+#siteAbout table{
+    float: left;
+    padding: 5px 0;
+    text-decoration: none;
+}
+#siteAbout table .ABC{
+    width: 150px;
+    font-weight: bold;
+}
+#siteAbout table .abc{
+    width: 180px;
+    color: #AFB2B7;
+}
+#siteAbout table .highlight{
+
+    background: rgba(202, 202, 202, 0.548)  ;
+
+}
+#siteAbout .media{
+    height: 80px;
+    background: rgb(184, 183, 183);
+    text-align: center;
+    margin-top:  auto;
+}
+#siteAbout .media img{
+    display:inline-block;
+    width:40px;
+    margin:16px 16px;
+    border-radius:25px;
+    
+}
+#siteAbout .media img:hover{
+    background: #f7f5f5;
+    transition: 0.3s;
+}
+
+.motto{
+    width: 100%;
+    height: 80px;
+    display: block;
+    line-height: 80px;
+    text-align: center;
+    font-family:  Microsoft JhengHei;
+}
+
+div.wrapper{
+    max-width: 940px;
+    margin-top: 60px;
+    margin-left:auto;
+    margin-right:auto;
+    transition: all 0.5s;
+    
+}
+div.wrapper.offset{
+    transform: translateY(100px);
+} 
+
+
+div.wrapper h2{
+    text-align: center;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: rgba(71, 72, 73, 0.884)
+}
+
+
+div.courseMenu{
+    height: 280px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffff;
+    padding: 40px 40px 30px;
+    box-shadow:0px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+
+#siteCourse .courseMenu .courseWrpper{
+    height: 10px;
+    margin-left: 0px;
+}
+#siteCourse .courseMenu nav .ul-left li{
+    display: block;
+    float: left;
+    width: 48%;
+    padding-left: 2%;
+  /*   color: rgba(71, 72, 73, 0.884) */
+}
+#siteCourse .courseMenu nav .ul-right li{
+    display: block;
+    float: right;
+    width: 48%;
+    padding-left: 2%;
+  /*   color: rgba(71, 72, 73, 0.884) */
+}
+#siteCourse .courseMenu nav ul li:hover{
+    background: rgba(214, 214, 213, 0.452);
+    border-radius: 10px;
+}
+
+#siteCourse .courseMenu nav .progressBar{
+    height: 5px;
+    background: rgba(139, 140, 141, 0.288);
+    border-radius: 2px;
+    margin: 20px 0 40px;
+    overflow: hidden;
+    width: 95%;
+}
+div.wrapper .progress{
+    height: 100%;
+    background: rgb(228, 103, 103);
+    width: 50%;
+    border-radius:4px;
+    transform:translateX(0);
+    transition:all 2s; 
+   
+}
+div.wrapper.offset .progress{
+    transform:translateX(-100%)
+}
+  
+ 
+div.calendarMenu{
+
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffff;
+    padding: 40px 40px 30px;
+    box-shadow:0px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+
+
+
+div.cantactMenu img{
+    height: 100%;
+    width:100%;
+}
+div.elseMenu img{
+    height: 100%;
+    width:100%;
+}
+
+
+div.contactMenu{
+
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffff;
+    padding: 40px 40px 30px;
+    box-shadow:0px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+
+div.elseMenu{
+
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffff;
+    padding: 40px 40px 30px;
+    box-shadow:0px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
