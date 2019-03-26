@@ -4,6 +4,7 @@ body{
     该属性可以有 1 到 4 个值,按顺序是上 右  下  左 */
     margin: 0;
 }
+
 .topNavBar .logo{
     font-family: 'Arial Black';
 }
@@ -154,7 +155,7 @@ hr{
  
 .banner {
     height:515px;
-    background-image: url(E:/remuse/images/background.jpg);
+    background-image: url(./background.jpg);
     background-position:center center;
     background-size: cover;
   }
